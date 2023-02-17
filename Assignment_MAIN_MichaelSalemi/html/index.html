@@ -1,0 +1,90 @@
+<!--
+index.html
+-page that is visible as either the users personal home page or a general page with a redirect to login/registration
+-will display a grid of the user's books with an option to add another book
+-details below are currently hard coded for layout selection
+-grid will span multiple "pages" in order to display numerous books
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/ab6b9559bc.js" crossorigin="anonymous"></script>
+    <title>Book Box - Home</title>
+    <link rel="icon" type="image/x-icon" href="../images/bookBoxIcon.ico">
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+    <header>
+        <div id="headerTitle">
+            <a href="./index.html"><img src="../images/bookBoxLogo.png" alt="bookbox logo"></a>
+            <h2>Your personal book depository</h2>
+        </div>
+        <div id="headerBox2">
+            <a href="register.html">
+                <img src="../images/bookBoxIcon.ico" alt="bookBoxIcon" />
+                <h3>testUser</h3>
+            </a>
+            <nav>
+                <div><a href="./addbook.html">Add Book</a> | <a href="./search.html">Search</a> | <a
+                        href="./login.html">Logout</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h2>Your Collection</h2>
+        <div id="contentBox">
+            <div class="bookbox">
+                <img src="../images/the_catcher_in_the_rye.jpg" alt="The Catcher in the Rye" height="250" width="150">
+                <div>
+                    <h3>The Catcher in the Rye</h3>
+                    <h4>J. D. Salinger</h4>
+                    <nav>
+                        <a href="./details.html">Details</a> <a href="./addbook.html">Edit</a> <a href="">Delete</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="bookbox">
+                <img src="../images/huckleberry_finn.jpg" alt="The Adventures of Huckleberry Finn" height="250"
+                    width="150">
+                <div>
+                    <h3>The Adventures of Huckleberry Finn</h3>
+                    <h4>Mark Twain</h4>
+
+                    <nav>
+                        <a href="./details.html">Details</a> <a href="./addbook.html">Edit</a> <a href="">Delete</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="bookbox">
+                <img src="../images/crack_the_coding_interview.jpg" alt="Crack the Coding Interview" height="250"
+                    width="150">
+                <div>
+                    <h3>Cracking the Coding Interview</h3>
+                    <h4>Gayle Laakmann McDowell</h4>
+                    <nav>
+                        <a href="./details.html">Details</a> <a href="./addbook.html">Edit</a> <a href="">Delete</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="bookbox">
+                <img src="../images/bookOfMormon.jpg" alt="The Book of Mormon" height="250" width="150">
+                <div>
+                    <h3>The Book of Mormon</h3>
+                    <h4>Joseph Smith</h4>
+                    <nav>
+                        <a href="./details.html">Details</a> <a href="./addbook.html">Edit</a> <a href="">Delete</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span>&copy; Michael Salemi - COIS 3420 - Assignment 1 - 2023</span>
+    </footer>
+</body>
+
+</html>

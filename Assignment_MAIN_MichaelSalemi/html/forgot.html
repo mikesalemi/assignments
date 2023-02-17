@@ -1,0 +1,69 @@
+<!--
+forgot.html
+-only accessible via login page
+-users will input either their username or email address and an email will be sent to the associated email address on record
+-there will be no prompt of an unsuccessful attempt to limit guesses from unauthorized users
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/ab6b9559bc.js" crossorigin="anonymous"></script>
+    <title>Book Box - Forgot Password</title>
+    <link rel="icon" type="image/x-icon" href="../images/bookBoxIcon.ico">
+    <link rel="stylesheet" href="../styles/main.css">
+
+</head>
+
+<body>
+    <header>
+        <div id="headerTitle">
+            <a href="./index.html"><img src="../images/bookBoxLogo.png" alt="bookbox logo"></a>
+            <h2>Your personal book depository</h2>
+        </div>
+        <div id="headerBox2">
+            <a href="register.html">
+                <img src="../images/bookBoxIcon.ico" alt="bookBoxIcon" />
+                <h3>testUser</h3>
+            </a>
+            <nav>
+                <div>
+                    <a href="./addbook.html">Add Book</a> | <a href="./search.html">Search</a> | <a
+                        href="./login.html">Logout</a>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    <main>
+        <div><i class="fa-solid fa-person-circle-question fa-5x"></i>
+            <h2>Forgot your password?</h2>
+        </div>
+        <div id="contentBox">
+            <!--submit form to future php-->
+            <form action="future.php" method="post" class="doubleGrid">
+                <div>
+                    <p>
+                        Enter the username or email you signed up with and a recovery message will be sent to your email
+                        address
+                        on file.
+                    </p>
+                </div>
+                <div>
+                    <label for="recovery">Username/Email:</label>
+                    <!--same search field to be used for either username or email lookup-->
+                    <input required type="text" id="recovery" name="recovery" placeholder="username/email">
+                    <input type="submit">
+                </div>
+                <div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <span>&copy; Michael Salemi - COIS 3420 - Assignment 1 - 2023</span>
+    </footer>
+</body>
+
+</html>

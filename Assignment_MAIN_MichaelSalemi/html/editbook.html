@@ -1,0 +1,115 @@
+<!--
+editbook.html
+-users can edit the details of any book in their collection
+-fields left unedited or with no value will not be changed
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="icon" type="image/x-icon" href="../images/bookBoxIcon.ico">
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+    <header>
+        <div id="headerTitle">
+            <a href="./index.html"><img src="../images/bookBoxLogo.png" alt="bookbox logo"></a>
+            <h2>Your personal book depository</h2>
+        </div>
+        <div id="headerBox2">
+            <a href="">
+                <img src="../images/bookBoxIcon.ico" alt="bookBoxIcon" />
+                <h3>testUser</h3>
+            </a>
+            <nav>
+                <div><a href="./addbook.html">Add Book</a> | <a href="./search.html">Search</a> | <a
+                        href="./login.html">Logout</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h2>Edit Book - The Catcher in the Rye</h2>
+        <form action="future.php" method="post">
+            <section>
+                <div><i class="fa-solid fa-book fa-7x"></i><i class="fa-solid fa-plus fa-3x"></i></div>
+                <div><label for="title">Title:</label></div>
+                <div><input required type="text" id="title" name="Title" placeholder="Title"
+                        value="The Catcher in the Rye">
+                </div>
+                <div><label for="author"></label>Author:</div>
+                <div><input required type="text" id="author" name="author" placeholder="Author" value="J. D. Salinger">
+                </div>
+                <fieldset>
+                    <!--if no image given, keep old image-->
+                    <!--disable unused input method with js-->
+                    <legend>Select Book Cover Photo:</legend>
+                    <div>
+                        <label for="cover_upload">Upload:</label>
+                        <!--requires js for filetype validation-->
+                        <input type="file" id="cover_upload" name="bookcover" accept=".png,.jpg">
+                    </div>
+                    <div>
+                        <label for="cover_url">URL:</label>
+                        <input type="url" id="cover_url" name="bookcover" placeholder="">
+                    </div>
+                </fieldset>
+                <div><label for="genre"> Genre:</label></div>
+                <select required name="genre" id="genre">
+                    <option selected disabled value="">---</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="sci_fi">Sci-Fi</option>
+                    <option value="romance">Romance</option>
+                    <option value="non_fiction">Non-Fiction</option>
+                    <option value="educational">Educational</option>
+                    <option value="history">History</option>
+                    <option value="other">Other</option>
+                </select>
+                <div><label for="rating">Rating:</label></div>
+                <input type="range" id="rating" name="rating" min="1" max="5" step="0.5" value="4.5">
+                <div><label for="date"></label>Publication Date:</div>
+                <div><input required type="date" id="date" name="date" value="1961-07-16"></div>
+                <div><label for="isbn">ISBN#:</label></div>
+                <div><input required type="text" id="isbn" name="isbn" placeholder="#############"
+                        pattern="^[0-9]{10}|[0-9]{13}$" value="9787543321724"></div>
+                <div><label for="description">Description:</label></div>
+                <!--if no valid description given, keep old description-->
+                <textarea required name="description" id="description" cols="50" rows="10" minlength="20"
+                    maxlength="500"></textarea>
+                <div>
+                    <fieldset>
+                        <legend>Book Format</legend>
+                        <!--hardcover option-->
+                        <input type="checkbox" id="hardcover" name="book_format" value="hardcover">
+                        <label for="hardcover">Hardcover</label>
+                        <!--paperback option-->
+                        <input type="checkbox" id="paperback" name="book_format" value="paperback">
+                        <label for="paperback">Paperback</label>
+                        <!--epub option-->
+                        <input type="checkbox" id="epub" name="book_format" value="epub">
+                        <label for="epub">EPub</label>
+                        <!--mobi option-->
+                        <input type="checkbox" id="mobi" name="book_format" value="mobi">
+                        <label for="mobi">Mobi</label>
+                        <!--pdf option-->
+                        <input type="checkbox" id="pdf" name="book_format" value="pdf">
+                        <label for="pdf">PDF</label>
+                    </fieldset>
+                </div>
+                <!--requires js validation on filetype-->
+                <div><label for="ebook_upload">Ebook Upload:</label></div>
+                <div><input type="file" name="ebook_upload" id="ebook_upload"></div>
+                <input type="submit">
+            </section>
+        </form>
+    </main>
+    <footer>
+        <hr>
+        <span>&copy; Michael Salemi - COIS 3420 - Assignment 1 - 2023</span>
+    </footer>
+</body>
+
+</html>

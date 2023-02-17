@@ -1,0 +1,111 @@
+<!--
+register.html
+-accessible via login page
+-ensures that username and email do not beling to another account
+-ensures password is relatively strong
+-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Box - Register</title>
+    <link rel="icon" type="image/x-icon" href="../images/bookBoxIcon.ico">
+    <script src="https://kit.fontawesome.com/ab6b9559bc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/main.css">
+
+</head>
+<body>
+<header>
+    <div id="headerTitle">
+        <a href="./index.html"><img src="../images/bookBoxLogo.png" alt="bookbox logo"></a>
+        <h2>Your personal book depository</h2>
+    </div>
+    <div id="headerBox2">
+        <a href="">
+            <img src="../images/bookBoxIcon.ico" alt="bookBoxIcon">
+            <h3>testUser</h3>
+        </a>
+        <nav>
+            <div><a href="./addbook.html">Add Book</a> | <a href="./search.html">Search</a> | <a href="./login.html">Logout</a>
+            </div>
+        </nav>
+    </div>
+
+</header>
+<!--submit form to future php-->
+<main>
+    <form action="future.php" method="post">
+        <div id="contentBox">
+            <div>
+                <div><i class="fa-regular fa-user fa-5x"></i><i class="fa-solid fa-plus fa-3x"></i></div>
+                <label for="profile_pic">Profile Picture:</label>
+                <!--use js to validate filetype and maximum filesize-->
+                <input type="file" name="profile_pic" id="profile_pic" accept=".png,.jpg">
+                <!--ensure username is not associated with existing account-->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="user" placeholder="username" required>
+                <!--ensure email is not associated with existing account-->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="address@email.com" required>
+                <!--use js to ensure password has at least 1 upper, 1 lower, 1 number, 1 special, minimum 8 characters-->
+                <label for="password1">Password:</label>
+                <input type="password" id="password1" name="password1" placeholder="password" required>
+                <!--validate that both password fields match using js-->
+                <label for="password2">Password:</label>
+                <input type="password" id="password2" name="password2" placeholder="password" required>
+            </div>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="123 Sesame Street" required>
+
+                <!--uses regex to validate phonenumber-->
+                <div style="display: flex">
+                    <div>
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone" name="phone" placeholder="6789998212" pattern="^[0-9]{10}$"
+                               required>
+                    </div>
+                    <div>
+                        <label for="phontType">Type:</label>
+                        <select name="phonetype" id="phontType" required>
+                            <option selected disabled value="">---</option>
+                            <option value="cell">Cell</option>
+                            <option value="home">Home</option>
+                            <option value="work">Work</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <fieldset>
+                    <legend>Favourite Genres:</legend>
+
+                    <div><input type="checkbox" id="mystery" name="genre" value="mystery">
+                        <label for="mystery">Mystery</label></div>
+
+                    <div><input type="checkbox" id="sci_fi" name="genre" value="sci_fi">
+                        <label for="sci_fi">Sci-Fi</label></div>
+
+                    <div> <input type="checkbox" id="romance" name="genre" value="romance">
+                        <label for="romance">Romance</label></div>
+
+                    <div><input type="checkbox" id="non_fiction" name="genre" value="non_fiction">
+                        <label for="non_fiction">Non-Fiction</label></div>
+
+                    <div><input type="checkbox" id="educational" name="genre" value="educational">
+                        <label for="educational">Educational</label></div>
+
+                    <div><input type="checkbox" id="history" name="genre" value="history">
+                        <label for="history">History</label></div>
+                </fieldset>
+                <input type="submit" name="submit" id="submit" style="align-self: end">
+            </div>
+        </div>
+    </form>
+</main>
+<footer>
+    <span>&copy; Michael Salemi - COIS 3420 - Assignment 1 - 2023</span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!--
+search.html
+-allows users to search their collection based on fields that were originally used to save book
+-results will be selectable to send to the details page
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Book Box - Search</title>
+    <link rel="icon" type="image/x-icon" href="../images/bookBoxIcon.ico">
+    <link rel="stylesheet" href="../styles/main.css">
+
+</head>
+
+<body>
+    <header>
+        <div id="headerTitle">
+            <a href="./index.html"><img src="../images/bookBoxLogo.png" alt="bookbox logo"></a>
+            <h2>Your personal book depository</h2>
+        </div>
+        <div id="headerBox2">
+            <a href="">
+                <img src="../images/bookBoxIcon.ico" alt="bookBoxIcon">
+                <h3>testUser</h3>
+            </a>
+            <nav>
+                <div><a href="./addbook.html">Add Book</a> | <a href="./search.html">Search</a> | <a
+                        href="./login.html">Logout</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h2>Search</h2>
+        <form action="future.php" method="post" id="searchFields">
+            <div>
+                <div><label for="title">Title:</label></div>
+                <div><input type="text" id="title" name="Title" placeholder="Title"></div>
+                <div><label for="author">Author:</label></div>
+                <div><input type="text" id="author" name="author" placeholder="Author"></div>
+                <div><label for="genre"> Genre:</label></div>
+                <select name="genre" id="genre">
+                    <option selected disabled>---</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="sci_fi">Sci-Fi</option>
+                    <option value="romance">Romance</option>
+                    <option value="non_fiction">Non-Fiction</option>
+                    <option value="educational">Educational</option>
+                    <option value="history">History</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div>
+                <div><label for="rating">Rating:</label></div>
+                <input type="range" id="rating" name="rating" min="1" max="5" step="0.5" value="3">
+                <div><label for="isbn">ISBN#:</label></div>
+                <div><input type="text" id="isbn" name="isbn" placeholder="#############"
+                        pattern="^[0-9]{10}|[0-9]{13}$">
+                </div>
+                <input type="submit">
+            </div>
+        </form>
+        <div id="contentBox">
+            <!--submit form to future php-->
+            <div class="bookbox">
+                <img src="../images/the_catcher_in_the_rye.jpg" alt="The Catcher in the Rye" height="250" width="150">
+                <div>
+                    <h3>Title:</h3>
+                    <h4>The Catcher in the Rye</h4>
+                    <h3>Author:</h3>
+                    <h4>J. D. Salinger</h4>
+                    <h3>ISBN#:</h3>
+                    <h4>9787543321724</h4>
+                    <h3>Genre:</h3>
+                    <h4>Other</h4>
+                    <!--page options-->
+                    <nav>
+                        <div><a href="./details.html">Details</a> <a href="./editbook.html">Edit</a> <a
+                                href="">Delete</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="bookbox">
+                <img src="../images/huckleberry_finn.jpg" alt="The Adventures of Huckleberry Finn" height="250"
+                    width="150">
+                <div>
+                    <h3>Title:</h3>
+                    <h4>The Catcher in the Rye</h4>
+                    <h3>Author:</h3>
+                    <h4>Mark Twain</h4>
+                    <h3>ISBN#:</h3>
+                    <h4>9798633894530</h4>
+                    <h3>Genre:</h3>
+                    <h4>Other</h4>
+                    <!--page options-->
+                    <nav>
+                        <div><a href="./details.html">Details</a> <a href="./editbook.html">Edit</a> <a
+                                href="">Delete</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="bookbox">
+                <img src="../images/crack_the_coding_interview.jpg" alt="Crack the Coding Interview" height="250"
+                    width="150">
+                <div>
+                    <h3>Title:</h3>
+                    <h4>Crack the Coding Interview</h4>
+                    <h3>Author:</h3>
+                    <h4>Gayle Laakmann McDowell</h4>
+                    <h3>ISBN#:</h3>
+                    <h4>9780984782857</h4>
+                    <h3>Genre:</h3>
+                    <h4>Educational</h4>
+                    <!--page options-->
+                    <nav>
+                        <div><a href="./details.html">Details</a> <a href="./editbook.html">Edit</a> <a
+                                href="">Delete</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="bookbox">
+                <img src="../images/bookOfMormon.jpg" alt="The Book of Mormon" height="250" width="150">
+                <div>
+                    <h3>Title:</h3>
+                    <h4>The Book of Mormon</h4>
+                    <h3>Author:</h3>
+                    <h4>Joseph Smith</h4>
+                    <h3>ISBN#:</h3>
+                    <h4>9781453771860</h4>
+                    <h3>Genre:</h3>
+                    <h4>Non-Fiction</h4>
+                    <nav>
+                        <a href="./details.html">Details</a> <a href="./addbook.html">Edit</a> <a href="">Delete</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span>&copy; Michael Salemi - COIS 3420 - Assignment 1 - 2023</span>
+    </footer>
+</body>
+
+</html>

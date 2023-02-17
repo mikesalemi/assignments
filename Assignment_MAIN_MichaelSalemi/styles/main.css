@@ -1,0 +1,361 @@
+@import url("reset.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,900;1,400&display=swap');
+
+
+/**************************/
+/* Styling for all pages' consistent content */
+/************************/
+:root {
+    font-family: "Source Sans Pro";
+    background-color: white;
+}
+
+hr {
+    height: 0.2em;
+    background-color: dimgray;
+    border-radius: 0.2em;
+    border: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 700px;
+}
+
+main {
+    flex: auto;
+    flex-direction: column;
+    align-self: center;
+    background-color: #C1C0BE;
+    max-width: 1000px;
+    min-width: 500px;
+    height: 80%;
+
+    box-shadow: 0 0 1em black;
+}
+
+#headerTitle>a>img {
+    margin-top: 0.5em;
+    transition: all .1s ease-in-out;
+}
+
+#headerTitle>a>img:hover {
+    transform: scale(1.1);
+}
+
+#headerBox2>a>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#headerBox2>a:hover {
+    transition: all .1s ease-in-out;
+    transform: scale(1.1);
+}
+
+main>h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.5em 1em;
+}
+
+header {
+    display: flex;
+    background-color: #093824;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6em 1em;
+    border-bottom: 0.5em solid black;
+    font-weight: bold;
+}
+
+#headerTitle {
+    justify-items: left;
+    font-size: 2em;
+    color: white;
+    align-items: start;
+}
+
+#headerBox2 {
+    align-items: end;
+}
+
+#headerTitle h2 {
+    padding-top: 0.2em;
+    border-top: solid black 0.2em;
+}
+
+#headerTitle h1 {
+    -webkit-text-stroke: 0.01em white;
+    font-size: 2em;
+}
+
+#headerBox2>a {
+    margin-bottom: 1em;
+}
+
+header>div {
+    display: flex;
+    flex-direction: column;
+}
+
+#headerBox2>a,
+#headerBox2>a:hover,
+#headerBox2>a:visited {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background-color: black;
+    padding-right: 0.5em;
+    border: solid black 0.2em;
+    border-radius: 2em;
+}
+
+#headerBox2>a:hover {
+    border-color: white;
+}
+
+#headerBox2 nav a:hover {
+    color: #BC222C;
+}
+
+#headerBox2 nav a {
+    text-decoration: none;
+    color: white;
+}
+
+#headerTitle img {
+    height: 50px;
+    margin-bottom: 0.2em;
+}
+
+#headerBox2 img {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 1em;
+}
+
+main>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+
+main>div>h2 {
+    font-weight: bold;
+    font-size: 2em;
+    margin-left: 1em;
+}
+
+footer {
+    border-top: 0.5em solid black;
+    height: 18px;
+}
+
+/************/
+/* contentBox is white box holding content on all pages */
+/************/
+#contentBox {
+    display: grid;
+    flex-direction: column;
+    border: 1em solid transparent;
+    background-color: white;
+    border-radius: 2em;
+    grid-template-columns: 50% 50%;
+    margin: 1em 2em 2em 2em;
+}
+
+#contentBox>div {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+#contentBox>div:last-child,
+#contentBox>div:nth-last-child(2):nth-child(odd) {
+    border-bottom: none;
+}
+
+#contentBox>div:nth-child(odd) {
+    border-right: solid #D6D0C9;
+}
+
+#contentBox>div:last-child {
+    border-right: none;
+}
+
+#contentBox h3 {
+    font-weight: bold;
+    font-size: 1em;
+    margin: 0.2em 0;
+}
+
+/*******************/
+/* .bookbox class is specific to details, search, index to
+display book information in grid */
+/*******************/
+.bookbox {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.bookbox img {
+    border: solid #1B361B;
+    /*padding: 1em 0;*/
+}
+
+.bookbox>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 1em;
+    height: auto;
+    min-height: 60%;
+}
+
+.bookbox>div h3 {
+    padding: 0.2em;
+    font-weight: bold;
+}
+
+.bookbox>div h4 {
+    padding: 0.2em;
+    font-style: italic;
+}
+
+.bookbox a,
+form a {
+    text-decoration: none;
+    color: dodgerblue;
+    border: .2em solid transparent;
+}
+
+.bookbox nav a:hover,
+form a:hover {
+    color: #BC222C;
+}
+
+#contentBox>.bookbox {
+    border-bottom: solid #D6D0C9;
+    padding: 0.5em;
+    flex-direction: row;
+    display: flex;
+}
+
+#description {
+    width: 100%;
+}
+
+.doubleGrid {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / span 2;
+    align-items: center;
+    justify-content: center;
+}
+
+.doubleGrid input {
+    margin: 0.5em;
+}
+
+/***************/
+/* form specific styling */
+/***************/
+#searchFields {
+    display: flex;
+    margin: 1em 0;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+fieldset label {
+    font-weight: normal;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+}
+
+input::placeholder {
+    color: black;
+    font-weight: bold;
+    opacity: 70%;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="url"],
+input[type="email"] {
+    border: solid transparent;
+    font-weight: bold;
+    border-radius: 0.2em;
+    color: black;
+    background-color: rgba(30, 63, 30, 0.4);
+    padding: 0.4em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="date"]:hover,
+input[type="url"]:hover,
+input[type="email"]:hover {
+    border-color: #093824;
+}
+
+option {
+    color: black;
+}
+
+select::selection {
+    color: #BC222C;
+}
+
+select {
+    padding: 0.4em;
+    border-radius: 0.2em;
+    background-color: rgba(30, 63, 30, 0.4);
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+input[type="range"] {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+input[type=submit] {
+    border-radius: 0.2em;
+    border-color: rgb(30, 63, 30);
+}
+
+input[type=submit]:hover {
+    color: white;
+    background-color: cornflowerblue;
+}
+
+label,
+legend {
+    margin-top: 0.5em;
+    font-weight: bold;
+}
+
+fieldset {
+    border: solid 0.2em #093824;
+    padding: 0.3em;
+}

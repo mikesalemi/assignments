@@ -1,0 +1,74 @@
+<!--
+login.html
+-accessible via homepage
+-option to create account and recover password are available through this page
+-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/ab6b9559bc.js" crossorigin="anonymous"></script>
+    <title>Book Box - Login</title>
+    <link rel="icon" type="image/x-icon" href="../images/bookBoxIcon.ico">
+    <link rel="stylesheet" href="../styles/main.css">
+
+</head>
+<body>
+    <header>
+        <div id="headerTitle">
+            <a href="./index.html"><img src="../images/bookBoxLogo.png" alt="bookbox logo"></a>
+            <h2>Your personal book depository</h2>
+        </div>
+        <div id="headerBox2">
+            <a href="">
+                <img src="../images/bookBoxIcon.ico" alt="bookBoxIcon">
+                <h3>testUser</h3>
+            </a>
+            <nav>
+                <div><a href="./addbook.html">Add Book</a> | <a href="./search.html">Search</a> | <a href="./login.html">Logout</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h2>Login</h2>
+        <div id="contentBox">
+            <div class="doubleGrid" style="flex-direction: column;">
+                <i class="fa-solid fa-house-user fa-5x"></i>
+                <!--submit form to future php-->
+                <form action="future.php" method="post">
+                    <div>
+                        <label for="username">Username:</label>
+                    </div>
+                    <div>
+                        <input required type="text" id="username" name="username" placeholder="username">
+                    </div>
+                    <div>
+
+                        <label for="password">Password:</label>
+                    </div>
+                    <div>
+                        <input required type="password" id="password" name="password" placeholder="password">
+                    </div>
+                    <div>
+                        <label for="remember">Remember me:</label>
+                        <input type="checkbox" name="remember" id="remember" value="true">
+                        <input type="submit">
+                    </div>
+                    <nav>
+                        <div>
+                            <a href="./forgot.html">Forgot password?</a>
+                        </div>
+                        <div>
+                            <a href="./register.html">Create Account</a>
+                        </div>
+                    </nav>
+                </form>
+            </div>
+        </div>
+    </main>
+<footer>
+    <span>&copy; Michael Salemi - COIS 3420 - Assignment 1 - 2023</span>
+</footer>
+</body>
+</html>
